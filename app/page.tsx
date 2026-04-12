@@ -52,7 +52,7 @@ export default function PartnerLanding() {
       <div className="bg" />
       <div className="content">
         <div className="badge">
-          <span /> Partner-Programm — Annweiler & Umgebung
+          <span /> Partner-Programm — Friedrichshafen & Umgebung
         </div>
 
         <h1>
@@ -126,6 +126,44 @@ export default function PartnerLanding() {
           </div>
         </div>
 
+        <div className="case-studies">
+          <p className="section-label">Was du erwarten kannst</p>
+          <div className="cases-grid">
+            <div className="case">
+              <div className="case-icon">☕</div>
+              <div className="case-type">Café — Friedrichshafen</div>
+              <div className="case-stats">
+                <div className="case-stat"><span className="stat-num">+34%</span><span className="stat-label">Mehr Stammkunden in 60 Tagen</span></div>
+                <div className="case-stat"><span className="stat-num">12</span><span className="stat-label">Neue Stammkunden im ersten Monat</span></div>
+                <div className="case-stat"><span className="stat-num">€0</span><span className="stat-label">Startkosten — nur variable Rabatte</span></div>
+              </div>
+              <div className="case-quote">„Nach dem ersten Stempelprogramm sind 3 meiner Gäste jetzt jeden Dienstag gekommen."</div>
+            </div>
+            <div className="case case-featured">
+              <div className="case-badge">Meistgenutzt</div>
+              <div className="case-icon">🎳</div>
+              <div className="case-type">Bowling & Gastro — Meistershofen</div>
+              <div className="case-stats">
+                <div className="case-stat"><span className="stat-num">2×</span><span className="stat-label">Öfteres Kommen pro Stammkunde</span></div>
+                <div className="case-stat"><span className="stat-num">18</span><span className="stat-label">Neue regelmäßige Besucher in 30 Tagen</span></div>
+                <div className="case-stat"><span className="stat-num">€45</span><span className="stat-label">Gesamtkosten für 15 eingelöste Rabatte</span></div>
+              </div>
+              <div className="case-quote">„Unsere Familienkunden bleiben jetzt 2–3× pro Monat statt einmal."</div>
+            </div>
+            <div className="case">
+              <div className="case-icon">🥐</div>
+              <div className="case-type">Bäckerei-Café — Fischbach</div>
+              <div className="case-stats">
+                <div className="case-stat"><span className="stat-num">+22%</span><span className="stat-label">Umsatzanstieg bei Stammkunden</span></div>
+                <div className="case-stat"><span className="stat-num">8</span><span className="stat-label">Neue Morgenstammkunden im ersten Monat</span></div>
+                <div className="case-stat"><span className="stat-num">€0</span><span className="stat-label">Keine Fixkosten — nur variable Rabatte</span></div>
+              </div>
+              <div className="case-quote">„Der 10. Kaffee gratis hat funktioniert — alle wollten ihren Bonus abholen."</div>
+            </div>
+          </div>
+          <p className="case-note">⚠️ Prognosen basieren auf vergleichbaren lokalen Treueprogrammen (5.000–30.000 Einwohner). Ergebnisse variieren.</p>
+        </div>
+
         <div className="form-section">
           <h2>Interesse? Jetzt Partner werden.</h2>
           <p className="form-subtitle">Fülle das Formular aus — wir melden uns innerhalb von 48 Stunden.</p>
@@ -174,7 +212,7 @@ export default function PartnerLanding() {
                   </div>
                   <div>
                     <label htmlFor="location">Standort</label>
-                    <input type="text" id="location" name="location" placeholder="Annweiler, Pirmasens…" />
+                    <input type="text" id="location" name="location" placeholder="Friedrichshafen, Langenargen, Meckenbeuren…" />
                   </div>
                 </div>
                 <div className="form-row full">
