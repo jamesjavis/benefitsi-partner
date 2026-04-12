@@ -52,7 +52,7 @@ export default function PartnerLanding() {
       <div className="bg" />
       <div className="content">
         <div className="badge">
-          <span /> Partner-Programm — Friedrichshafen & Umgebung
+          <span /> Partner-Programm — Annweiler & Umgebung
         </div>
 
         <h1>
@@ -131,7 +131,7 @@ export default function PartnerLanding() {
           <div className="cases-grid">
             <div className="case">
               <div className="case-icon">☕</div>
-              <div className="case-type">Café — Friedrichshafen</div>
+              <div className="case-type">Café — Annweiler</div>
               <div className="case-stats">
                 <div className="case-stat"><span className="stat-num">+34%</span><span className="stat-label">Mehr Stammkunden in 60 Tagen</span></div>
                 <div className="case-stat"><span className="stat-num">12</span><span className="stat-label">Neue Stammkunden im ersten Monat</span></div>
@@ -212,7 +212,7 @@ export default function PartnerLanding() {
                   </div>
                   <div>
                     <label htmlFor="location">Standort</label>
-                    <input type="text" id="location" name="location" placeholder="Friedrichshafen, Langenargen, Meckenbeuren…" />
+                    <input type="text" id="location" name="location" placeholder="Annweiler, Lug, Eußerthal…" />
                   </div>
                 </div>
                 <div className="form-row full">
