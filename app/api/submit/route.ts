@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import fs from "fs";
+import path from "path";
 
 const TO_EMAIL = "benefitsi@pm.me";
 
@@ -48,11 +50,24 @@ export async function POST(req: NextRequest) {
         replyTo: email,
       });
     } else {
-      // No Resend key — log and return success (MVP fallback)
       console.log("=== BENEFITSI FORM SUBMISSION (no RESEND_API_KEY) ===");
       console.log({ businessName, contactName, phone, email, category, location, message, timestamp });
       console.log("Add RESEND_API_KEY to .env.local to enable email delivery.");
     }
+
+    // Save lead to local JSON file for admin dashboard
+    const DATA_FILE = path.join(process.cwd(), "data", "leads.json");
+    const leads = fs.existsSync(DATA_FILE) ? JSON.parse(fs.readFileSync(DATA_FILE, "utf-8")) : [];
+    const newLead = {
+      id: Date.now().toString(),
+      businessName, contactName, email, phone: phone || "",
+      category: category || "", location: location || "",
+      message: message || "", timestamp, source: "partner-landing-v2",
+      status: "new",
+    };
+    leads.unshift(newLead);
+    fs.mkdirSync(path.dirname(DATA_FILE), { recursive: true });
+    fs.writeFileSync(DATA_FILE, JSON.stringify(leads, null, 2));
 
     return NextResponse.json({ ok: true });
   } catch (err: unknown) {
